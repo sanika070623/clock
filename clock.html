@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Time</title>
+	<style type="text/css">
+		#tm{
+			color: purple;
+			text-align: center;
+			margin-top: 80px;
+			color: purple;
+			font-family: Arial black;
+			text-shadow: 0px 20px 30px purple;
+			-webkit-text-stroke:1px black;
+			font-size: 50px;
+			float: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<fieldset>
+	<h1 id="tm">00:00:0000</h1>
+	</fieldset>
+		<script type="text/javascript">
+		let tm=document.getElementById("tm");
+		function displayTime()
+		{
+			let time = new Date();
+			let hr = time.getHours();
+			let min = time.getMinutes();
+			let sec = time.getSeconds();
+			tm.innerHTML=`${hr}:${min}:${sec}`;
+		}
+		setInterval(displayTime,1000);
+	</script>
+
+</body>
+</html>
